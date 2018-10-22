@@ -10,11 +10,23 @@ public class PlayerController : MonoBehaviour {
 
     private bool playerActive;
     private Vector2 lastMove;
+	
+	private static bool playerExists;
 
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+		
+		if(!playerExists){
+			playerExists = true;	
+			DontDestroyOnLoad(transform.gameObject);
+		}	
+		else{
+			Destroy (gameObject);
+		}
+		
+		
 	}
 	
 	// Update is called once per frame

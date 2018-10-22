@@ -23,7 +23,4 @@ public class LoadArea : MonoBehaviour {
 	
 	}
 	
-	
-	
-	
 }
