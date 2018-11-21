@@ -16,8 +16,9 @@ public class SlimeController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        timeBetweenMoveCounter = timeBetweenMove;
-        timeToMoveCounter = timeToMove;
+        
+        timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
+        timeToMoveCounter = Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
         rigidBody = GetComponent<Rigidbody2D>();
         moving = false;
 	}
@@ -31,7 +32,7 @@ public class SlimeController : MonoBehaviour {
             if(timeToMoveCounter < 0)
             {
                 moving = false;
-                timeToMoveCounter = timeToMove;
+                timeToMoveCounter = Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
             }
         }
         else
@@ -41,7 +42,7 @@ public class SlimeController : MonoBehaviour {
             if(timeBetweenMoveCounter < 0)
             {
                 moving = true;
-                timeBetweenMoveCounter = timeBetweenMove;
+                timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
                 moveDirection = new Vector3(Random.Range(-1f, 1f) * moveSpeed, Random.Range(-1f, 1f) * moveSpeed, 0f);
             }
         }
