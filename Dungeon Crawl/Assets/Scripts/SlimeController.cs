@@ -66,13 +66,12 @@ public class SlimeController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.name == "Player")
+        if(other.gameObject.tag == "Player")
         {
            
             other.gameObject.SetActive(false);
             reloading = true;
             player = other.gameObject;
-
         }
     }
 }
