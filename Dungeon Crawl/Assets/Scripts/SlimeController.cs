@@ -72,7 +72,6 @@ public class SlimeController : MonoBehaviour {
             other.gameObject.SetActive(false);
             reloading = true;
             player = other.gameObject;
-
         }
     }
 }
