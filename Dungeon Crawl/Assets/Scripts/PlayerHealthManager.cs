@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthManager : MonoBehaviour {
 
@@ -14,9 +15,10 @@ public class PlayerHealthManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(playerCurrentHealth < 0)
+		if(playerCurrentHealth <= 0)
         {
-            gameObject.SetActive(false);
+            SceneManager.LoadScene("test_scene");
+            playerCurrentHealth = playerMaxHealth;
         }
 	}
 
