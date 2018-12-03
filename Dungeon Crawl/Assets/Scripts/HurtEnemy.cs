@@ -7,7 +7,7 @@ public class HurtEnemy : MonoBehaviour
     public int damageToGive;
     public GameObject damageBurst;
     public Transform hitPoint;
-
+    public GameObject damageNumber;
     // Use this for initialization
     void Start()
     {
@@ -29,6 +29,8 @@ public class HurtEnemy : MonoBehaviour
             //Destroy(other.gameObject);
             other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
             Instantiate(damageBurst, transform.position, hitPoint.rotation);
+            var clone = (GameObject) Instantiate(damageNumber, hitPoint.position, Quaternion.Euler (Vector3.zero));
+            clone.GetComponent<FloatingNumbers>().damageNumber = damageToGive;
 
         }
     }
