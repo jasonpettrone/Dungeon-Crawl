@@ -23,8 +23,6 @@ GameObject:
   - component: {fileID: 114299345228979168}
   - component: {fileID: 114307229133922566}
   - component: {fileID: 114595756201171066}
-  - component: {fileID: 114813022720569092}
-  - component: {fileID: 114845580750760806}
   m_Layer: 5
   m_Name: DamageNumbers
   m_TagString: Untagged
@@ -107,32 +105,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 32
---- !u!114 &114813022720569092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1959303601603566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c468455c385da1c4ab27d2153363c071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  damageNumber: 33
-  displayNumber: {fileID: 114927870902669966}
---- !u!114 &114845580750760806
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1959303601603566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad14a913507396344bccea837bdc0581, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToDestory: 1
 --- !u!114 &114927870902669966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,7 +180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.56, y: -10.3}
+  m_AnchoredPosition: {x: 0.56, y: -4}
   m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224916825950701434
