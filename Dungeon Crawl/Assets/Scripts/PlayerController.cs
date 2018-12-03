@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour {
 	
 	private static bool playerExists;
 
+	private bool attacking;
+	public float attackTime;
+	private float attackTimeCounter;
+	
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -60,6 +64,22 @@ public class PlayerController : MonoBehaviour {
         anim.SetBool("playerActive", playerActive);
         anim.SetFloat("lastmoveX", lastMove.x);
         anim.SetFloat("lastmoveY", lastMove.y);
-
+		
+		if(Input.GetKeyDown("space")){
+			
+			attackTimeCounter = attackTime;
+			attacking = true;
+			myRigidbody.velocity = Vector2.zero;
+			anim.SetBool("Attacking", true);
+		}
+		
+		if(attackTimeCounter>=0){
+				attackTimeCounter -= Time.deltaTime;
+		}	
+		if(attackTimeCounter<=0){
+				
+			attacking = false;
+			anim.SetBool("Attacking", false);
+		}	
     }
 }
